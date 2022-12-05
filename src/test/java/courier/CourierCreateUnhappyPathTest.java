@@ -35,4 +35,14 @@ public class CourierCreateUnhappyPathTest {
         int statusCode = response.extract().statusCode();
         assertEquals(SC_CONFLICT, statusCode);
     }
+
+    @Test
+    @DisplayName("Not enough data for create account")
+    @Description("Send post request to /api/v1/courier, expected status code 400 bad request")
+    public void notEnoughDataForCreateCourierAccountEmptyPassword() {
+        courierCreate = new CourierCreate("testuser1", "", "mily");
+        ValidatableResponse response = courierClient.create(courierCreate);
+        int statusCode = response.extract().statusCode();
+        assertEquals(SC_BAD_REQUEST, statusCode);
+    }
 }

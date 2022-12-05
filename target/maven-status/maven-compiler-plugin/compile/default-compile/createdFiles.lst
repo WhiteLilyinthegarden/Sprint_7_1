@@ -1,0 +1,10 @@
+courier\CourierClient.class
+courier\CourierCredentials.class
+org\example\Main.class
+courier\CourierCreate.class
+order\OrderCreate.class
+order\OrderListRequest.class
+courier\RestClient.class
+courier\CourierDelete.class
+order\OrderCreateRequest.class
+courier\CourierInvalid.class
